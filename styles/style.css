@@ -18,10 +18,6 @@
   filter: grayscale(80%)
 }
 
-.filter-hue-rotate {
-  filter: hue-rotate(40deg);
-}
-
 .filter-saturate {
   filter: saturate(200%);
 }
@@ -34,12 +30,16 @@
     grayscale(10%);
 }
 
+.filter-blur {
+  filter: blur(8px);
+}
+
 .filter-sepia {
   filter: sepia(150%);
 }
 
-.filter-blur {
-  filter: blur(8px);
+.filter-hue-rotate {
+  filter: hue-rotate(40deg);
 }
 
 .page {
@@ -122,20 +122,15 @@
 .panel__image-label {
   position: absolute;
   z-index: 1;
-
   opacity: 0.5;
-
   color: var(--text-color);
   font-family: var(--accent-font-family);
-
   font-size: 14px;
   line-height: normal;
-
   text-transform: uppercase;
   text-shadow: 0 0 1px var(--background-color);
-  inset-inline-end: 13px;
-  inset-block-start: 24px;
-
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
   mix-blend-mode: hard-light;
 }
 
@@ -182,7 +177,7 @@
   border-color: var(--text-color);
 }
 
-.btn {
+.like_button{
   position: relative;
   z-index: 1;
   border: 2px solid var(--text-color);
@@ -199,15 +194,15 @@
   overflow: hidden;
 }
 
-.btn:focus {
+.like_button:focus {
   outline: none;
 }
 
-.btn:focus-visible {
+.like_button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--text-color);
 }
 
-.btn::before {
+.like_button::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -220,11 +215,11 @@
   block-size: 100%;
 }
 
-.btn:hover::before {
+.like_button:hover::before {
   transform: scaleX(1);
 }
 
-.btn--store {
+.like_button--store {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -242,7 +237,7 @@
   mix-blend-mode: difference;
 }
 
-.btn__icon {
+.like_button__icon {
   block-size: 21px;
   inline-size: 21px;
   color: var(--button-text-color);
@@ -289,7 +284,7 @@
   block-size: 39px;
 }
 
-.dialog-box__btn {
+.dialog-box__like_button {
   inline-size: 100%;
 }
 
@@ -307,11 +302,11 @@
     max-inline-size: 340px;
   }
 
-  .btn--store {
+  .like_button--store {
     flex-direction: column;
   }
 
-  .btn__icon {
+  .like_button__icon {
     block-size: 28px;
     inline-size: 28px;
   }
@@ -321,9 +316,10 @@
   }
 }
 
-@supports (-webkit-text-stroke: 1px var(--background-color)) {
+@supports (-webkit-text-stroke: 1px var(--background-color)) or (text-stroke: 1px var(--background-color)) {
   .panel__image-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
   }
 }

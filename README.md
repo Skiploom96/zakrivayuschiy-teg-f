@@ -1,4 +1,4 @@
-# zakrivayuschiy-teg-f
+# zakrivayuschiy-teg
 
-- Репозиторий проекта: https://github.com/Skiploom96/zakrivayuschiy-teg-f
-- Проект опубликованный в gh-pages: https://skiploom96.github.io//zakrivayuschiy-teg-f/
+- Репозиторий : https://github.com/Skiploom96/zakrivayuschiy-teg-f
+- Проект в gh-pages: https://skiploom96.github.io//zakrivayuschiy-teg-f/
